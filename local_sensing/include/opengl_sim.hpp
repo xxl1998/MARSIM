@@ -1854,6 +1854,8 @@ void opengl_pointcloud_render::init_pointcloud_data()
         rgb_pt << 0,0,1;
         // rgb_pt << cloud_color_mesh.points[ i ].r, cloud_color_mesh.points[ i ].g, cloud_color_mesh.points[ i ].b;
         
+
+        
         g_eigen_pt_vec[ 2*i ] = eigen_pt;
         g_eigen_pt_vec[ 2*i+1 ] = rgb_pt;
         // g_eigen_rgb_vec[ i ] = rgb_pt;
