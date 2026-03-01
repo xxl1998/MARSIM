@@ -25,25 +25,13 @@ The video is available on youtube: https://youtu.be/hiRtcq-5lN0 and
 
 ## Update
 
-### Ubuntu 22.04 and ROS2 are also supported in ubuntu20_ros2 branch.
-
-Ubuntu 20.04 is also supported in ubuntu20 branch.
+**'main' and 'fuel_ubuntu20' was merged into 'ubuntu20' branch. After that, 'ubuntu20' branch was renamed to 'main'. Branch 'ubuntu20_ros2' is deprecated. The new 'main' branch will be compatible to ROS1 and ROS2.**
 
 **Ten realistic maps (low and high resolution) have been realeased in the realease packages.**
 
 **A new branch that merge with FUEL has been released in the fuel_ubuntu20 branch.**
 
-
-
-## Update
-
-Ubuntu 20.04 is also supported in ubuntu20 branch.
-
-**Ten realistic maps (low and high resolution) have been realeased in the realease packages.**
-
-**A new branch that merge with FUEL has been released in the fuel_ubuntu20 branch.**
-
-## Prerequisited
+## Prerequisite
 
 ### Ubuntu and ROS
 
@@ -67,6 +55,25 @@ cd marsim_ws/src
 git clone git@github.com:hku-mars/MARSIM.git
 cd ..
 catkin_make
+```
+
+### Requirements of FUEL
+
+reference: https://github.com/HKUST-Aerial-Robotics/FUEL
+
+```bash
+mkdir nlopt && cd nlopt
+wget https://github.com/stevengj/nlopt/archive/refs/tags/v2.7.1.tar.gz -O nlopt_v2.7.1.tar.gz
+tar -zvxf nlopt_v2.7.1.tar.gz
+cd nlopt-2.7.1/
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make -j
+sudo make install
+```
+
+```bash
+sudo apt-get install libarmadillo-dev
 ```
 
 ## Run single drone simulation

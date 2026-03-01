@@ -1,2 +1,4 @@
 uav_simulator/local_sensing/data/*
-cascadePID/data/*
+cascadePID/data/*.txt
+fuel_planner/utils/lkh_tsp_solver/resource/*
+!fuel_planner/utils/lkh_tsp_solver/resource/.keep_dir
